@@ -1,12 +1,12 @@
-- Iniciar relatório (criar documento com estrutura inicial).
-- - Escrever tópico "Estrutura de pastas" explicando a divisão das pastas do projeto.
+- Iniciar relatÃ³rio.
+- - Escrever tÃ³pico "Estrutura de pastas" explicando a divisÃ£o das pastas do projeto.
 
 - Colocar no GitHub.
-- - Criar documentação no GitHub?
+- - Criar documentaÃ§Ã£o no GitHub?
 
-- Criar proposta de interfaces gráficas.
+- Criar proposta de interfaces grÃ¡ficas.
 - - Identidade visual do jogo.
 - - Tela de menu.
-- - Tela de configurações.
-- - Tela de instruções.
+- - Tela de configuraÃ§Ãµes.
+- - Tela de instruÃ§Ãµes.
 - - Tela do jogo.
