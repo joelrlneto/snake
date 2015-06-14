@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1434238375 source:/home/joel/Documentos/snake/main.cpp
+	<SFML/Graphics.hpp>
+
+1434260223 source:/home/joel/Documentos/snake/cpp/game.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"../h/game.h"
+	"../h/node.h"
+	<SFML/Graphics.hpp>
+
+1434259671 /home/joel/Documentos/snake/h/game.h
+	"map.h"
+	"snake.h"
+
+1434253892 /home/joel/Documentos/snake/h/map.h
+	"food.h"
+	<SFML/Graphics.hpp>
+
+1431742792 /home/joel/Documentos/snake/h/food.h
+
+1434255667 /home/joel/Documentos/snake/h/snake.h
+	"node.h"
+	<SFML/Graphics.hpp>
+
+1433992908 /home/joel/Documentos/snake/h/node.h
+	"orientation.h"
+
+1431531276 /home/joel/Documentos/snake/h/orientation.h
+
+1434260005 source:/home/joel/Documentos/snake/cpp/main.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	<ctime>
+	"../h/game.h"
+	<SFML/Graphics.hpp>
+
+1434256189 source:/home/joel/Documentos/snake/cpp/map.cpp
+	<cstdlib>
+	<ctime>
+	<iostream>
+	"../h/map.h"
+	<SFML/Graphics.hpp>
+
+1434256042 source:/home/joel/Documentos/snake/cpp/snake.cpp
+	<cstdlib>
+	<ctime>
+	<iostream>
+	"../h/snake.h"
+
