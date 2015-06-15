@@ -40,11 +40,13 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="cb.bmp" />
+		<Unit filename="cpp/foodfactory.cpp" />
 		<Unit filename="cpp/game.cpp" />
 		<Unit filename="cpp/main.cpp" />
 		<Unit filename="cpp/map.cpp" />
 		<Unit filename="cpp/snake.cpp" />
 		<Unit filename="h/food.h" />
+		<Unit filename="h/foodfactory" />
 		<Unit filename="h/game.h" />
 		<Unit filename="h/map.h" />
 		<Unit filename="h/node.h" />

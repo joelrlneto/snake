@@ -11,8 +11,11 @@ class Game{
 		Snake *snake;
 		int points;
 		sf::RenderWindow *window;
-		sf::Texture gameOverTexture, splashTexture;
-		sf::RectangleShape screenRect;
+		sf::Texture gameOverTexture, splashTexture, scoreTexture;
+		sf::RectangleShape screenRect, scoreRect;
+		sf::Text scoreText, levelText;
+        sf::Font defaultFont;
+        int level;
 	public:
         bool IsRunning = false; //Será verdadeiro quando o jogo estiver rodando
         bool IsGameOver = false; //Será verdadeiro quando o jogo for perdido
@@ -24,6 +27,8 @@ class Game{
 		void LoadContent(); //Carrega os recursos que serão usados durante o jogo
 		void Start();//Inicia o jogo
 		void ShowSplashScreen();
+		void ShowScore();
+		void CheckLevel();
 };
 
 #endif

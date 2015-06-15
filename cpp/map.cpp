@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "../h/map.h"
+#include "../h/foodfactory.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -24,30 +25,27 @@ Food Map::GetCurrentFood(){
 }
 
 void Map::AddFood() {
-	currentFood->X = rand() % width;
-	currentFood->Y = rand() % height;
+	currentFood = FoodFactory::GetRandomFood(width, height);
 }
 
 void Map::Print(){
-	system("CLS");
-	for(int i = 0; i < height; i++){
-		for(int j = 0; j < width; j++){
-			if(currentFood->X == i && currentFood->Y == j)
-				std::cout << " O ";
-			else
-				std::cout << " . ";
-		}
-		std::cout << std::endl;
-	}
+
 }
 
 void Map::Draw(){
+    sf::Texture mapTexture;
+    mapTexture.loadFromFile("assets/images/field.png");
+
     sf::RectangleShape mapShape(sf::Vector2f(0, 0));
     mapShape.setSize(sf::Vector2f(width*20, height*20));
+    mapShape.setTexture(&mapTexture);
     window->draw(mapShape);
 
+    sf::Texture foodTexture;
+    foodTexture.loadFromFile(currentFood->ImagePath);
+
     sf::CircleShape foodShape(10);
-    foodShape.setFillColor(sf::Color(255, 0, 0));
+    foodShape.setTexture(&foodTexture);
     foodShape.setPosition(sf::Vector2f(currentFood->X*20, currentFood->Y*20));
     window->draw(foodShape);
 }

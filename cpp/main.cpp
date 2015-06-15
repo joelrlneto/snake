@@ -14,7 +14,6 @@ int main(){
 	sf::Clock clock;
 	float timeCount = 1;
 
-
 	while(mainRenderWindow.isOpen()){
         sf::Event event;
         while (mainRenderWindow.pollEvent(event))
@@ -36,6 +35,14 @@ int main(){
                     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
                         g.SendCommand(4);
                     };
+                    if(g.IsGameOver){
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::F1)){
+                            g.Start();
+                        };
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+                            mainRenderWindow.close();
+                        };
+                    }
                     break;
                 case sf::Event::MouseButtonReleased:
                         g.Start();

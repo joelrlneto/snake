@@ -1,9 +1,12 @@
 #ifndef _FOOD_
 #define _FOOD_
+#include <string>
+#include <SFML/System/String.hpp>
 
 struct Food {
 	int X, Y;
-	//TODO: Adicionar características para comidas especiais (valor, combo, etc)
+	sf::String ImagePath;
+	int Value;
 };
 
 #endif
