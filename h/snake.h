@@ -11,6 +11,8 @@ class Snake {
 		int size;
 		int mapWidth, mapHeight; //Limites do mapa
 		sf::RenderWindow *window;
+		sf::Texture bodyTexture, tailTexture, headTexture;
+		sf::CircleShape headShape, bodyShape, tailShape;
 	public:
 		Snake(sf::RenderWindow *_window, int _mapWidth, int _mapHeight); //Construtor padrão (inicia a cobra com 3 blocos)
 		Node* GetHead();
@@ -23,6 +25,7 @@ class Snake {
 		void Print(); //Imprime o corpo da cobra (para testes)
 		void Draw(); // Desenha a cobra na janela
 		bool HasBittenItself();//Retorna true se a cobra mordeu a si própria
+		bool HasABodyPartIn(int _x, int _y);
 };
 
 #endif

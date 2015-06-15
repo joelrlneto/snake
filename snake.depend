@@ -2,7 +2,7 @@
 1434238375 source:/home/joel/Documentos/snake/main.cpp
 	<SFML/Graphics.hpp>
 
-1434406446 source:/home/joel/Documentos/snake/cpp/game.cpp
+1434411579 source:/home/joel/Documentos/snake/cpp/game.cpp
 	<ctime>
 	<cstring>
 	<sstream>
@@ -11,7 +11,7 @@
 	<SFML/Graphics.hpp>
 	<SFML/System/String.hpp>
 
-1434406284 /home/joel/Documentos/snake/h/game.h
+1434407248 /home/joel/Documentos/snake/h/game.h
 	"map.h"
 	"snake.h"
 
@@ -19,11 +19,11 @@
 	"food.h"
 	<SFML/Graphics.hpp>
 
-1434385324 /home/joel/Documentos/snake/h/food.h
+1434408046 /home/joel/Documentos/snake/h/food.h
 	<string>
 	<SFML/System/String.hpp>
 
-1434255667 /home/joel/Documentos/snake/h/snake.h
+1434409756 /home/joel/Documentos/snake/h/snake.h
 	"node.h"
 	<SFML/Graphics.hpp>
 
@@ -32,7 +32,7 @@
 
 1431531276 /home/joel/Documentos/snake/h/orientation.h
 
-1434394724 source:/home/joel/Documentos/snake/cpp/main.cpp
+1434407240 source:/home/joel/Documentos/snake/cpp/main.cpp
 	<iostream>
 	<cstdlib>
 	<cmath>
@@ -40,7 +40,7 @@
 	"../h/game.h"
 	<SFML/Graphics.hpp>
 
-1434386630 source:/home/joel/Documentos/snake/cpp/map.cpp
+1434408360 source:/home/joel/Documentos/snake/cpp/map.cpp
 	<cstdlib>
 	<ctime>
 	<iostream>
@@ -48,19 +48,19 @@
 	"../h/foodfactory.h"
 	<SFML/Graphics.hpp>
 
-1434256042 source:/home/joel/Documentos/snake/cpp/snake.cpp
+1434410745 source:/home/joel/Documentos/snake/cpp/snake.cpp
 	<cstdlib>
 	<ctime>
 	<iostream>
 	"../h/snake.h"
 
-1434387184 source:/home/joel/Documentos/snake/cpp/foodfactory.cpp
+1434407982 source:/home/joel/Documentos/snake/cpp/foodfactory.cpp
 	<sstream>
 	<cstdlib>
 	"../h/foodfactory.h"
 	<SFML/System/String.hpp>
 
-1434386172 /home/joel/Documentos/snake/h/foodfactory.h
+1434407949 /home/joel/Documentos/snake/h/foodfactory.h
 	<cstring>
 	"food.h"
 

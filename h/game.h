@@ -16,6 +16,7 @@ class Game{
 		sf::Text scoreText, levelText;
         sf::Font defaultFont;
         int level;
+        float stepTime;
 	public:
         bool IsRunning = false; //Será verdadeiro quando o jogo estiver rodando
         bool IsGameOver = false; //Será verdadeiro quando o jogo for perdido
@@ -29,6 +30,7 @@ class Game{
 		void ShowSplashScreen();
 		void ShowScore();
 		void CheckLevel();
+		float GetStepTime();
 };
 
 #endif

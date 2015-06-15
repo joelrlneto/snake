@@ -18,6 +18,47 @@ Snake::Snake(sf::RenderWindow *_window, int _mapWidth, int _mapHeight) : size(1)
 	//Comer 2 vezes para criar o corpo com total de 3 blocos
 	Eat();
 	Eat();
+
+	bodyTexture.loadFromFile("assets/images/body.png");
+	tailTexture.loadFromFile("assets/images/body.png");
+
+    switch(head->Direction){
+        case Left:
+            headTexture.loadFromFile("assets/images/faceLeft.png");
+        break;
+        case Right:
+            headTexture.loadFromFile("assets/images/faceRight.png");
+        break;
+        case Up:
+            headTexture.loadFromFile("assets/images/faceUp.png");
+        break;
+        case Down:
+            headTexture.loadFromFile("assets/images/faceDown.png");
+        break;
+	}
+
+    switch(tail->Direction){
+        case Left:
+            tailTexture.loadFromFile("assets/images/tailLeft.png");
+        break;
+        case Right:
+            tailTexture.loadFromFile("assets/images/tailRight.png");
+        break;
+        case Up:
+            tailTexture.loadFromFile("assets/images/tailUp.png");
+        break;
+        case Down:
+            tailTexture.loadFromFile("assets/images/tailDown.png");
+        break;
+	}
+
+	headShape.setTexture(&headTexture);
+	bodyShape.setTexture(&bodyTexture);
+	tailShape.setTexture(&tailTexture);
+
+	headShape.setRadius(10);
+	bodyShape.setRadius(10);
+	tailShape.setRadius(10);\
 };
 
 Node* Snake::GetHead(){
@@ -119,12 +160,46 @@ void Snake::Print(){
 };
 
 void Snake::Draw(){
-    sf::CircleShape shape(10);
-    shape.setFillColor(sf::Color(100, 250, 50));
-    Node *temp = head;
-	while(temp != NULL){
-		shape.setPosition(temp->X*20, temp->Y*20);
-		window->draw(shape);
+    switch(head->Direction){
+        case Left:
+            headTexture.loadFromFile("assets/images/faceLeft.png");
+        break;
+        case Right:
+            headTexture.loadFromFile("assets/images/faceRight.png");
+        break;
+        case Up:
+            headTexture.loadFromFile("assets/images/faceUp.png");
+        break;
+        case Down:
+            headTexture.loadFromFile("assets/images/faceDown.png");
+        break;
+	}
+
+    switch(tail->Direction){
+        case Left:
+            tailTexture.loadFromFile("assets/images/tailLeft.png");
+        break;
+        case Right:
+            tailTexture.loadFromFile("assets/images/tailRight.png");
+        break;
+        case Up:
+            tailTexture.loadFromFile("assets/images/tailUp.png");
+        break;
+        case Down:
+            tailTexture.loadFromFile("assets/images/tailDown.png");
+        break;
+	}
+
+    headShape.setPosition(head->X*20, head->Y * 20);
+    window->draw(headShape);
+
+    tailShape.setPosition(tail->X*20, tail->Y * 20);
+    window->draw(tailShape);
+
+    Node *temp = head->Next;
+	while(temp->Next != NULL){
+		bodyShape.setPosition(temp->X*20, temp->Y*20);
+		window->draw(bodyShape);
 		temp = temp->Next;
 	}
 }
@@ -134,10 +209,17 @@ bool Snake::HasBittenItself(){
 	while(temp != NULL){
 		if(temp->X == head->X && temp->Y == head->Y)
             return true;
-            //TODO: Alterar este método para retornar o bloco que foi mordido,
-            // assim, se a cobra tiver esse poder, poderá simplesmente quebrar o corpo neste ponto,
-            // mas sem morrer (comida especial)
-		temp = temp->Next;
+        temp = temp->Next;
+	}
+	return false;
+}
+
+bool Snake::HasABodyPartIn(int _x, int _y){
+    Node *temp = head;
+	while(temp != NULL){
+		if(temp->X == _x && temp->Y == _y)
+            return true;
+        temp = temp->Next;
 	}
 	return false;
 }

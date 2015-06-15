@@ -6,7 +6,7 @@
 
 class FoodFactory {
     public:
-        static Food* GetRandomFood(int maxX, int maxY);
+        static Food* GetRandomFood(int _x, int _y);
 };
 
 #endif

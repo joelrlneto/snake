@@ -25,7 +25,9 @@ Food Map::GetCurrentFood(){
 }
 
 void Map::AddFood() {
-	currentFood = FoodFactory::GetRandomFood(width, height);
+    int x = rand() % width;
+    int y = rand() % height;
+	currentFood = FoodFactory::GetRandomFood(x, y);
 }
 
 void Map::Print(){

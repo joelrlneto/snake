@@ -53,7 +53,7 @@ int main(){
              mainRenderWindow.clear();
              g.Update();
              g.Draw();
-             timeCount += 0.5f;
+             timeCount += g.GetStepTime();
         }
         mainRenderWindow.display();
 	}

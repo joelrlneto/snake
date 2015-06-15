@@ -8,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System/String.hpp>
 
-Game::Game(sf::RenderWindow *_window):window(_window), points(0) ,level(1){
+Game::Game(sf::RenderWindow *_window):window(_window), points(0) ,level(1), stepTime(0.5f){
     srand(time(NULL)*rand());
 	map = new Map(32,20, window);
 	snake = new Snake(window, 32, 20);
@@ -24,7 +24,11 @@ void Game::Update(){
         points += map->GetCurrentFood().Value;
         if(points < 0)
             points = 0;
-        map->AddFood();//TODO: Não adicionar dentro do corpo da cobra (verificar posição e gerar novamente)
+
+        map->AddFood();
+        while(snake->HasABodyPartIn(map->GetCurrentFood().X, map->GetCurrentFood().Y)){
+             map->AddFood();
+        }
     }
 
     CheckLevel();
@@ -136,6 +140,19 @@ void Game::CheckLevel(){
         case 2:
             if (points >= 50){
                 level = 3;
+                stepTime = 0.3f;
+            }
+        break;
+        case 3:
+            if (points >= 50){
+                level = 4;
+                stepTime = 0.2f;
+            }
+        break;
+        case 4:
+            if (points >= 100){
+                level = 5;
+                stepTime = 0.1f;
             }
         break;
     }
@@ -143,4 +160,8 @@ void Game::CheckLevel(){
     StrP2 << "level " << level;
     sf::String text(StrP2.str());
     levelText.setString(text);
+}
+
+float Game::GetStepTime(){
+    return stepTime;
 }
