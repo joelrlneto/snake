@@ -30,10 +30,6 @@ void Map::AddFood() {
 	currentFood = FoodFactory::GetRandomFood(x, y);
 }
 
-void Map::Print(){
-
-}
-
 void Map::Draw(){
     sf::Texture mapTexture;
     mapTexture.loadFromFile("assets/images/field.png");

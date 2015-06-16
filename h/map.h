@@ -4,7 +4,7 @@
 #include "food.h"
 #include <SFML/Graphics.hpp>
 
-///Classe que representa o mapa (matriz de pontos)
+///Classe que representa o mapa
 class Map {
 	private:
 		///Largura (width) e altura (height) do mapa.
@@ -24,8 +24,6 @@ class Map {
 		Food GetCurrentFood();
 		///Adiciona uma comida em posição aleatória.
 		void AddFood();
-		///Imprime o mapa no console (para testes).
-		void Print();
 		///Desenha o mapa na janela.
 		void Draw();
 };
