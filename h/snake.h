@@ -7,12 +7,16 @@
 ///Classe que representa a cobra (lista encadeada)
 class Snake {
 	private:
+		///Ponteiros para a cabeça e cauda da cobra
 		Node *head, *tail;
+		///Tamanho atual da cobra
 		int size;
 		///Limites do mapa.
 		int mapWidth, mapHeight; 
-		sf::RenderWindow *window;///Janela onde será desenhada a cobra;
-		sf::Texture bodyTexture, tailTexture, headTexture;///Testuras da corpo, da cauda e cabeça da cobra.
+		///Janela onde será desenhada a cobra;
+		sf::RenderWindow *window;
+		///Testuras da corpo, da cauda e cabeça da cobra.
+		sf::Texture bodyTexture, tailTexture, headTexture;
 		///Shapes da cabeça, do corpo e da cauda da cobra.
 		sf::CircleShape headShape, bodyShape, tailShape;
 	public:
