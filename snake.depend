@@ -2,7 +2,7 @@
 1434238375 source:/home/joel/Documentos/snake/main.cpp
 	<SFML/Graphics.hpp>
 
-1434411579 source:/home/joel/Documentos/snake/cpp/game.cpp
+1434475806 source:/home/joel/Documentos/snake/cpp/game.cpp
 	<ctime>
 	<cstring>
 	<sstream>

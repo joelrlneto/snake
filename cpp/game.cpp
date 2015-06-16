@@ -133,24 +133,24 @@ void Game::ShowScore(){
 void Game::CheckLevel(){
     switch(level){
         case 1:
-            if (points >= 20){
+            if (points >= 10){
                 level = 2;
             }
         break;
         case 2:
-            if (points >= 50){
+            if (points >= 20){
                 level = 3;
                 stepTime = 0.3f;
             }
         break;
         case 3:
-            if (points >= 50){
+            if (points >= 30){
                 level = 4;
                 stepTime = 0.2f;
             }
         break;
         case 4:
-            if (points >= 100){
+            if (points >= 40){
                 level = 5;
                 stepTime = 0.1f;
             }
