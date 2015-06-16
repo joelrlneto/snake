@@ -46,7 +46,7 @@
 		<Unit filename="cpp/map.cpp" />
 		<Unit filename="cpp/snake.cpp" />
 		<Unit filename="h/food.h" />
-		<Unit filename="h/foodfactory" />
+		<Unit filename="h/foodfactory.h" />
 		<Unit filename="h/game.h" />
 		<Unit filename="h/map.h" />
 		<Unit filename="h/node.h" />
