@@ -10,9 +10,10 @@ Projeto de jogo Snake desenvolvido em C++ com a biblioteca SFML. O jogo foi dese
 - Biblioteca SFML;
 - Sistema Operacional Ubuntu 14.10.
 
-# Instruções para execução
+# Instruções execução
 - Instalar a biblioteca SFML no Ubuntu, seguindo os passos contidos na documentação oficial: http://www.sfml-dev.org/;
-- Instalar o editor Code::Blocks no Ubuntu;
-- Abrir o projeto (snake.cbp);
-- Executar.
+- Executar no terminal:
 
+`g++ -c cpp/*.cpp -std=c++11`
+
+`g++ *.o -o snake -lsfml-graphics -lsfml-system -lsfml-window`
