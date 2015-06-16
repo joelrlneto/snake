@@ -4,13 +4,13 @@
 #include "food.h"
 #include <SFML/Graphics.hpp>
 
-//Classe que representa o mapa (matriz de pontos)
+///Classe que representa o mapa (matriz de pontos)
 class Map {
 	private:
 		///Largura (width) e altura (height) do mapa.
 		int width, height;
 		///Comida atual
-		Food *currentFood; 
+		Food *currentFood;
 		///Janela onde o mapa será desenhado.
 		sf::RenderWindow *window;
 	public:
@@ -23,9 +23,9 @@ class Map {
 		///Retorna a comida atualmente no mapa.
 		Food GetCurrentFood();
 		///Adiciona uma comida em posição aleatória.
-		void AddFood(); 
+		void AddFood();
 		///Imprime o mapa no console (para testes).
-		void Print(); 
+		void Print();
 		///Desenha o mapa na janela.
 		void Draw();
 };

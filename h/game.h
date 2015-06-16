@@ -4,11 +4,11 @@
 #include "map.h"
 #include "snake.h"
 
-//Classe que encapsula os elementos do jogo
+///Classe que encapsula os elementos do jogo
 class Game{
 	private:
 		///Mapa do jogo.
-		Map *map; 
+		Map *map;
 		///Cobra do jogo.
 		Snake *snake;
 		///Pontuação atual.
@@ -29,9 +29,9 @@ class Game{
         float stepTime;
 	public:
 		///Será verdadeiro quando o jogo estiver rodando
-        bool IsRunning = false; 
+        bool IsRunning = false;
 		///Será verdadeiro quando o jogo for perdido
-        bool IsGameOver = false; 
+        bool IsGameOver = false;
 		///Construtor padrão.
 		Game(sf::RenderWindow *_window);
 		///Atualiza os elementos do jogo.
@@ -43,7 +43,7 @@ class Game{
 		///Mostra a tela de game over.
 		void ShowGameOver();
 		///Carrega os recursos que serão usados durante o jogo.
-		void LoadContent(); 
+		void LoadContent();
 		///Inicia o jogo.
 		void Start();
 		///Mostra a tela inicial.
